@@ -1,6 +1,15 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.Optional;
 
+@Data
+//@Setter
+//@Getter
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Persona {
     String nombre;
     String poblacion;
@@ -19,31 +28,5 @@ public class Persona {
         else
             this.poblacion = _poblacion;
         this.edad = _edad;
-    }
-
-    public String getPoblacion() {
-        return poblacion;
-    }
-
-    public void setPoblacion(String poblacion) {
-        this.poblacion = poblacion;
-    }
-
-    public Optional<Integer> getEdad() {
-        if (edad.isEmpty())
-            return Optional.empty();
-        return edad;
-    }
-
-    public void setEdad(Optional<Integer> edad) {
-        this.edad = edad;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 }
